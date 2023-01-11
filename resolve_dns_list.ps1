@@ -14,7 +14,7 @@ $ServerList = @('172.16.20.11','172.16.20.12')
 # Result Data
 $FinalResult = @()
 
-# Collect Data
+# Collect Data: Resolve-DnsName
 foreach ($IP in $IPList) {
     $tempObj = "" | Select-Object Name, IPAddress, Status, ErrorMessage
     try {
