@@ -4,7 +4,6 @@ Set-ExecutionPolicy Bypass -Scope Process
 # Path
 $Path = "C:\Media\dev\ps\resolve_dns_list"
 
-
 # IP List: list or file
 #$IPList = @('172.16.82.57','172.16.81.95','10.20.26.13')
 $IPList = Get-Content $Path\resolve_dns_list_ip.txt -Encoding UTF8
@@ -32,4 +31,8 @@ foreach ($IP in $IPList) {
     }
     $FinalResult += $tempObj
 }
+# Export XLX
+$FinalResult | Export-Excel -Path $Path\resolve_dns_list_ip.xlsx 
+
+# Print Result
 return $FinalResult
