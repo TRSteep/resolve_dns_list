@@ -2,7 +2,7 @@
 Set-ExecutionPolicy Bypass -Scope Process
 
 # Path
-$Path = "C:\Media\dev\ps\resolve_dns_list"
+$Path = "resolve_dns_list"
 
 # IP List: list or file
 #$IPList = @('172.16.82.57','172.16.81.95','10.20.26.13')
